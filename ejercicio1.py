@@ -1,62 +1,31 @@
-'''
-Creación de un módulo para validación de nombres de usuarios
-'''
-
-import os
-
-def validar_alfanumerico(usuario):
-    if usuario.isalnum() == True:
-        print('Nombre de usuario válido')
-        ingres_contraseña()
+"""
+Este código válida que una persona cuente con la edad mínima y países de origen determinados
+para poder entrar al ejército, si la edad de la persona es mayor o igual a 18 años y su país de origen es 
+España puede entrar al ejército o también si la edad de la persona es mayor o igual a 20 y su país de origen
+es Colombia también puede entrar al ejército de lo contrario esta persona no sería apta para entrar al ejército.
+"""
+"""
+solicitar datos:
+1) edad_persona
+2) país_origen
+validar datos:
+si edad_persona es mayor o igual a 18 y su pais_origen es España o si edad_persona es mayor o igual a 20 y su país_origen es Colombia:    
+    imprime que esta persona es apta para entrar al ejército.
+si no: 
+    imprime que esta persona no es apta para entrar al ejército.
+"""
+def entrarEjercito():
+    edad_persona = int(input("Edad: ")) 
+    pais_origen = input('País de origen: ').lower
+    if edad_persona >= 18 and pais_origen == 'españa' or edad_persona >= 20 and pais_origen == 'colombia': 
+        print('Esta persona puede entrar al ejército')
     else:
-        print('El nombre de usuario puede contener solo letras y números') 
+        print('esta persona no puede entrar al ejército')
 
-def ingres_contraseña():
-    print('                                 VALIDACIÓN DE CONTRASEÑA')
-    contr = input('Escribe tu contraseña: ')
-    if len(contr) > 8:
-        if contr.islower() == True:
-            print('La contraseña debe contener minúsculas y mayúsculas')
-        elif contr.isupper() == True:
-            print('La contraseña debe contener minúsculas y mayúsculas')
-        else:
-            if contr.isalnum() == True: 
-                print('La contraseña debe de contener al menos un carácter no alfanumérico') 
-            else:    
-                for letra in contr:
-                    if letra == ' ':
-                        print('La contraseña no puede tener espacios')
-                        break      
-                else:
-                    print('La contraseña es válida')
-                      
-    else:
-        print('La contraseña debe contener igual o más de 8 caráteres')  
+entrarEjercito()
 
-def main():
-    os.system('cls')
-    print('                                    VALIDACIÓN DE NOMBRE DE USUARIO')
-    nombre = input('Introduce tu nombre de usuario: ')
-    continuar = True
-    os.system('cls')
-    while continuar == True:
-        if len(nombre) < 6:
-            print('El nombre del usuario debe contener al menos 6 caracteres')
-            continuar = False
-        elif len(nombre) > 12:
-            print('El nombre de usuario no debe contener más de 12 caracteres')
-            continuar = False     
-        else:
-            validar_alfanumerico(nombre)
-            continuar = False
-    input('Presiona enter para continuar')
-    
-        
-if __name__ == '__main__':
-    main()
 
-   
-    
+
 
 
 
