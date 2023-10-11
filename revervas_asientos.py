@@ -17,7 +17,6 @@ asientos_anfiteatro = [
                         ['L']*10,
                         ['L']*10,
                         ['L']*10]
-print(asientos_anfiteatro[0][0])
 #2do Paso. Creamos el menú que nos permitirá mostrar el estado de los asientos, reservar asiento o salir del programa...
 RESERVAR = 1
 MOSTRAR = 2
