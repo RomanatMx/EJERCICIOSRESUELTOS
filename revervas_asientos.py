@@ -44,7 +44,7 @@ def ReservarAsientos():
         print('El asiento está disponible, disfrute su película')
         asientos_anfiteatro[fila][columna] = 'X'
     elif asientos_anfiteatro[fila][columna] == 'X':
-        print('Lo sentimos el haciento está reservado')
+        print('Lo sentimos el asiento está reservado')
         ReservarAsientos()
 #definimos la función main o principal que es la que nos imprimirá el menu y nos permitirá elegir las opciones disponibles
 def main():
