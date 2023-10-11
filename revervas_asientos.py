@@ -29,11 +29,11 @@ def mostrar_menú():
         {MOSTRAR} Mostrar asientos disponibles
         {SALIR} Salir
     ''')
-#definimos la función para la impresión del estado actual de asientos disponibles
+#3er Paso. Definimos la función para la impresión del estado actual de asientos disponibles
 def MostrarAsientosDisponibles():
     print(asientos_anfiteatro)
 
-#definimos la función para solicitar al cliente el asiento por fila y columna que desea ocupar
+#4to Paso. Definimos la función para solicitar al cliente el asiento por fila y columna que desea ocupar
 #si el asiento se encuentra libre podrá ocuparlo y este se reservará con 'X' como señal de asiento ocupado
 #si el asiento se encuentra ocupado, enviará devuelta al cliente a la selección de la fila y columna 
 def ReservarAsientos():
@@ -46,7 +46,7 @@ def ReservarAsientos():
     elif asientos_anfiteatro[fila][columna] == 'X':
         print('Lo sentimos el asiento está reservado')
         ReservarAsientos()
-#definimos la función main o principal que es la que nos imprimirá el menu y nos permitirá elegir las opciones disponibles
+#5to Paso. Definimos la función main o principal que es la que nos imprimirá el menu y nos permitirá elegir las opciones disponibles
 def main():
     continuar = True
     while continuar: 
@@ -65,7 +65,7 @@ def main():
             print('Opción no válida.')
         input('Presiona enter para continuar')
 
-#llamamos la la funcion main como la principal para la ejecución en la terminal
+#6to Paso. Llamamos la la funcion main como la principal para la ejecución en la terminal
 if __name__ == '__main__':
     main()
         
